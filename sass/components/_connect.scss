@@ -1,0 +1,40 @@
+.connect {
+  display: flex;
+  margin-left: auto;
+}
+
+.connect__mail {
+  margin-right: 50px;
+}
+
+.connect__tel,
+.connect__mail {
+  display: flex;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $third-text-color;
+  transition: $time;
+  transition-timing-function: $cubic-bezier;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+// for icons
+.connect__icon {
+  fill: #757575;
+  margin: auto 10px auto 0;
+  transition: $time;
+  transition-timing-function: $cubic-bezier;
+
+  .connect__mail:hover &,
+  .connect__tel:hover &,
+  .connect__mail:focus &,
+  .connect__tel:focus & {
+    fill: $accent-color;
+  }
+}

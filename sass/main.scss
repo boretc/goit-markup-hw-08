@@ -1,0 +1,18 @@
+@import './utils/variables';
+////если нужно нормалайз подключить как файл в base
+@import './base/reset';
+@import './base/common';
+@import './utils/hidden';
+///////////////////////////////////////
+@import './components/container';
+@import './components/modal';
+@import './components/logo';
+///////////////////////////////////////
+@import './layout/header';
+@import './layout/hero';
+@import './layout/about';
+@import './layout/work';
+@import './layout/team';
+@import './layout/partner';
+@import './layout/footer';
+@import './layout/portfolio';

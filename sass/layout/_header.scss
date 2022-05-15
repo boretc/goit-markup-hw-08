@@ -1,0 +1,18 @@
+.header {
+  background: $first-bg-color;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ececec;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header__logo {
+  margin-right: 93px;
+}
+
+@import '../components/menu';
+@import '../components/connect';
