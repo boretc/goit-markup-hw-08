@@ -10,8 +10,9 @@
 .modal {
   position: absolute;
   padding: 40px;
-  width: 528px;
-  height: 581px;
+  width: 95vw;
+  height: 609px;
+
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -19,6 +20,13 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal-close {
@@ -48,12 +56,18 @@
 
 .modal-title {
   font-weight: 700;
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 4.17vw;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 12px;
   color: $second-text-color;
+  @media screen and (min-width: 480px) {
+    font-size: 20px;
+  }
+  @media screen and (min-width: 1200px) {
+    line-height: 1.15;
+  }
 }
 
 .modal-input {
@@ -106,17 +120,38 @@
   }
 }
 
+.form-field:nth-child(5) {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-field:focus-within {
+  // label {
+  //   color: red;
+  // }
+  .input-label {
+    color: $accent-color;
+    @media screen and (min-width: 768px) {
+      color: $second-text-color;
+    }
+  }
+}
+
 .mt20 {
   margin-top: 20px;
 }
 
-.input-text {
+.input-label {
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.01em;
   color: $third-text-color;
   display: block;
   margin-bottom: 4px;
+}
+
+.modal-input:focus + .input-check-text {
+  color: $accent-color;
 }
 
 .input-wrap {
@@ -158,16 +193,27 @@
 .modal-button-wrap {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 15.975px;
+  @media screen and (min-width: 480px) {
+    margin-top: 30px;
+  }
 }
 
 .modal-check-text {
-  font-size: 14px;
-  line-height: 171%;
+  font-size: calc(7px + 1.04vw);
+  line-height: 1.17;
+  // outline: 1px solid blue;
   letter-spacing: 0.03em;
   color: $third-text-color;
   display: flex;
   align-items: center;
+  @media screen and (min-width: 480px) {
+    font-size: 12px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 
   &::before {
     content: '';
@@ -189,6 +235,18 @@
 }
 
 .modal-check-text-link {
+  font-size: calc(7px + 1.04vw);
+  line-height: 1.17;
+  letter-spacing: 0.03em;
   color: $accent-color;
-  margin-left: 3px;
+  margin-left: 25px;
+  //outline: 1px solid green;
+  @media screen and (min-width: 480px) {
+    margin-left: 6px;
+    font-size: 12px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }

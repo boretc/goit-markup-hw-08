@@ -1,5 +1,21 @@
 .work {
+  display: none;
   padding-bottom: 94px;
+  @media screen and (min-width: 1200px) {
+    display: inherit;
+  }
+}
+
+.work-list {
+  margin-bottom: -30px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+}
+
+.work-items {
+  margin-bottom: 30px;
+  margin-left: 30px;
 }
 
 .work-title,
