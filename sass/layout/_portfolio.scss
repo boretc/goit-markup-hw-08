@@ -11,6 +11,7 @@
   flex-wrap: wrap;
   margin-top: -15px;
   margin-bottom: 40px;
+
   @media screen and (min-width: 768px) {
     justify-content: center;
     margin-bottom: 30px;
@@ -28,6 +29,7 @@
     margin-right: 0px;
   }
 }
+
 .portfolio-btn-item:nth-child(3) {
   @media screen and (min-width: 768px) {
     margin-right: 8px;
@@ -40,15 +42,19 @@
   border: 0;
   font-family: inherit;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 3.81vw;
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
   color: $second-text-color;
   cursor: pointer;
-  padding: 6px 22px;
+  padding: 6px 5.24vw;
   transition: $time;
   transition-timing-function: $cubic-bezier;
+  @media screen and (min-width: 480px) {
+    padding: 6px 22px;
+    font-size: 16px;
+  }
 
   &:hover,
   &:focus {

@@ -16,3 +16,119 @@
 
 @import '../components/menu';
 @import '../components/connect';
+
+.menu-btn {
+  // display: none;
+  background-color: transparent;
+  margin-left: auto;
+  // display: block;
+  border: none;
+}
+
+.menu-btn__icon {
+  fill: $second-text-color;
+  padding: auto;
+  .menu-btn:hover & {
+    fill: $accent-color;
+  }
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  background: $first-bg-color;
+  padding: 48px 0 48px 40px;
+}
+
+.close-menu-btn,
+.open-menu-btn {
+  background-color: transparent;
+  display: block;
+  // mt10;
+
+  margin-left: auto;
+  border: none;
+}
+.close-menu-btn__icon {
+  // position: absolute;
+  // top: 8px;
+  // right: 8px;
+  background: $first-bg-color;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  // height: 30px;
+  // width: 30px;
+  // transition: $time;
+  // transition-timing-function: $cubic-bezier;
+}
+// .mob-menu-list {
+// }
+.mob-menu-list__item {
+  margin-bottom: 32px;
+  &:last-child {
+    margin-bottom: 302px;
+  }
+}
+
+.mob-menu-list__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  // // text-align: center;
+  letter-spacing: 0.02em;
+  margin-bottom: 32px;
+}
+
+// .mob-menu-connec {
+
+// }
+.mob-menu-connect__tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: $accent-color;
+  // margin-top: 302px;
+  margin-bottom: 32px;
+}
+.mob-menu-connect__mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: $third-text-color;
+  margin-bottom: 64px;
+}
+
+.mob-social-list {
+  display: flex;
+  // justify-content: center;
+}
+
+// .mob-social-item + .mob-social-item {
+//   margin-left: 10px;
+// }
+
+.mob-social-list__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+
+  //   width: 44px;
+  //   height: 44px;
+  //   border-radius: 50%;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   transition: $time;
+  //   transition-timing-function: $cubic-bezier;
+
+  //   &:hover,
+  //   &:focus {
+  //     background-color: $accent-color;
+  //   }
+}

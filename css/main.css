@@ -422,9 +422,7 @@ body {
 }
 
 .menu-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
 }
 
 .menu-list__item {
@@ -467,9 +465,7 @@ body {
 }
 
 .connect {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   margin-left: auto;
 }
 
@@ -508,6 +504,91 @@ body {
 }
 .connect__mail:hover .connect__icon, .connect__tel:hover .connect__icon, .connect__mail:focus .connect__icon, .connect__tel:focus .connect__icon {
   fill: #2196f3;
+}
+
+.menu-btn {
+  background-color: transparent;
+  margin-left: auto;
+  border: none;
+}
+
+.menu-btn__icon {
+  fill: #212121;
+  padding: auto;
+}
+.menu-btn:hover .menu-btn__icon {
+  fill: #2196f3;
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  background: #ffffff;
+  padding: 48px 0 48px 40px;
+}
+
+.close-menu-btn,
+.open-menu-btn {
+  background-color: transparent;
+  display: block;
+  margin-left: auto;
+  border: none;
+}
+
+.close-menu-btn__icon {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.mob-menu-list__item {
+  margin-bottom: 32px;
+}
+.mob-menu-list__item:last-child {
+  margin-bottom: 302px;
+}
+
+.mob-menu-list__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  margin-bottom: 32px;
+}
+
+.mob-menu-connect__tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+  margin-bottom: 32px;
+}
+
+.mob-menu-connect__mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #757575;
+  margin-bottom: 64px;
+}
+
+.mob-social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mob-social-list__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
 }
 
 .hero {
@@ -1277,17 +1358,23 @@ body {
   border: 0;
   font-family: inherit;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 3.81vw;
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
   cursor: pointer;
-  padding: 6px 22px;
+  padding: 6px 5.24vw;
   -webkit-transition: 250ms;
   transition: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .portfolio-btn {
+    padding: 6px 22px;
+    font-size: 16px;
+  }
 }
 .portfolio-btn:hover, .portfolio-btn:focus {
   background-color: #2196f3;
