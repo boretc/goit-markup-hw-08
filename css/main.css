@@ -417,16 +417,33 @@ body {
           align-items: center;
 }
 
-.header__logo {
-  margin-right: 93px;
+@media screen and (min-width: 768px) {
+  .header__logo {
+    margin-right: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    margin-right: 93px;
+  }
 }
 
 .menu-list {
   display: none;
 }
+@media screen and (min-width: 768px) {
+  .menu-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 
-.menu-list__item:not(:last-child) {
-  margin-bottom: 50px;
+.menu-list__item {
+  margin-right: 50px;
+}
+.menu-list__item:last-child {
+  margin-right: 0px;
 }
 
 .menu-list__link {
@@ -463,11 +480,37 @@ body {
 
 .connect {
   display: none;
-  margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .connect {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .connect {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
-.connect__mail {
-  margin-right: 50px;
+@media screen and (min-width: 768px) {
+  .connect__mail {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .connect__mail {
+    margin-right: 30px;
+  }
 }
 
 .connect__tel,
@@ -475,15 +518,25 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: #757575;
   -webkit-transition: 250ms;
   transition: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .connect__tel,
+.connect__mail {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 .connect__tel:hover, .connect__tel:focus,
 .connect__mail:hover,
@@ -508,6 +561,11 @@ body {
   margin-left: auto;
   display: block;
   border: none;
+}
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
 }
 
 .menu-btn__icon {

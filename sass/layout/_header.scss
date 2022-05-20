@@ -11,7 +11,12 @@
 }
 
 .header__logo {
-  margin-right: 93px;
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 
 @import '../components/menu';
@@ -22,6 +27,9 @@
   margin-left: auto;
   display: block;
   border: none;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .menu-btn__icon {
