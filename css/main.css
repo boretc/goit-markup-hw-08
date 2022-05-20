@@ -627,7 +627,11 @@ body {
   letter-spacing: 0.02em;
   color: #2196f3;
 }
-.mob-social-list__link::after {
+
+.mob-social-list__item:not(:last-child) {
+  margin-right: 10px;
+}
+.mob-social-list__item:not(:last-child) .mob-social-list__link::after {
   content: "";
   width: 0px;
   height: 22px;
