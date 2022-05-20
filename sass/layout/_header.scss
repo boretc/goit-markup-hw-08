@@ -4,7 +4,7 @@
   padding-bottom: 25px;
   border-bottom: 1px solid #ececec;
 
-  .container {
+  > .container {
     display: flex;
     align-items: center;
   }
@@ -18,10 +18,9 @@
 @import '../components/connect';
 
 .menu-btn {
-  // display: none;
   background-color: transparent;
   margin-left: auto;
-  // display: block;
+  display: block;
   border: none;
 }
 
@@ -36,40 +35,53 @@
 .mob-menu {
   position: fixed;
   top: 0;
+  left: 0;
   height: 100vh;
   width: 100vw;
-  left: 0;
   background: $first-bg-color;
-  padding: 48px 0 48px 40px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+  z-index: 5;
+  > .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    overflow: auto;
+    padding-left: 0;
+  }
 }
 
 .close-menu-btn,
 .open-menu-btn {
+  position: absolute;
+  top: 21px;
+  right: 25px;
   background-color: transparent;
   display: block;
-  // mt10;
-
   margin-left: auto;
   border: none;
+  padding: 0;
 }
+
 .close-menu-btn__icon {
-  // position: absolute;
-  // top: 8px;
-  // right: 8px;
   background: $first-bg-color;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  // height: 30px;
-  // width: 30px;
-  // transition: $time;
-  // transition-timing-function: $cubic-bezier;
+  border: none;
+  transition: $time;
+  transition-timing-function: $cubic-bezier;
+
+  .close-menu-btn:hover &,
+  .close-menu-btn:focus & {
+    fill: $accent-color;
+  }
 }
-// .mob-menu-list {
-// }
+
 .mob-menu-list__item {
-  margin-bottom: 32px;
-  &:last-child {
-    margin-bottom: 302px;
+  &:not(:last-child) {
+    margin-bottom: 32px;
   }
 }
 
@@ -77,21 +89,22 @@
   font-weight: 500;
   font-size: 40px;
   line-height: 1.18;
-  // // text-align: center;
   letter-spacing: 0.02em;
-  margin-bottom: 32px;
+  color: $second-text-color;
+  transition: $time;
+  transition-timing-function: $cubic-bezier;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 
-// .mob-menu-connec {
-
-// }
 .mob-menu-connect__tel {
   font-weight: 500;
   font-size: 34px;
   line-height: 1.18;
   letter-spacing: 0.02em;
   color: $accent-color;
-  // margin-top: 302px;
   margin-bottom: 32px;
 }
 .mob-menu-connect__mail {
@@ -105,30 +118,27 @@
 
 .mob-social-list {
   display: flex;
-  // justify-content: center;
 }
 
-// .mob-social-item + .mob-social-item {
-//   margin-left: 10px;
-// }
+.mob-social-list__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
 
 .mob-social-list__link {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
-
-  //   width: 44px;
-  //   height: 44px;
-  //   border-radius: 50%;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  //   transition: $time;
-  //   transition-timing-function: $cubic-bezier;
-
-  //   &:hover,
-  //   &:focus {
-  //     background-color: $accent-color;
-  //   }
+  color: $accent-color;
+  &::after {
+    content: '';
+    width: 0px;
+    height: 22px;
+    // left: 135px;
+    // top: 726px;
+    margin-left: 10px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+  }
 }

@@ -4,10 +4,8 @@
 }
 
 .menu-list__item {
-  margin-right: 50px;
-
-  &:last-child {
-    margin-right: 0px;
+  &:not(:last-child) {
+    margin-bottom: 50px;
   }
 }
 
